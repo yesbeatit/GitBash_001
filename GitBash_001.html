@@ -48,7 +48,7 @@ https://ithelp.ithome.com.tw/articles/10133221
 一.GitBash_001.本機建立端檔案直接上傳github失敗
 (大多是先Github網站上先建立專案,再下載才能連線更新)
 二.設定ssh連線失敗
-(還是要打帳號密碼)
+(還是要打帳號密碼)－－－－（Ｏ）已更新
 ******************************************************
 有空在研究了，用GitHub Desktop本機建立
 再直接上傳github能成功,sync也比較快!!!!!
@@ -69,7 +69,16 @@ git remote add origin git@github.com:yesbeatit/GitBash_001.git
 git push -u origin master
 git push
 
-
+*****************************更新*************************************
+打這個SSH成功，不用密碼
+---看一下地址,可能顯示https
+git remote -v
+----改成ssh的
+git remote set-url origin git@github.com:yesbeatit/GitBash_001.git
+---上傳
+git push
+(---下載git pull)
+************************************************************************
 ===================
 本機端檔案上傳
 001.設定ssh連線密碼，從本機建立GitBash直接上傳到github  (X)
