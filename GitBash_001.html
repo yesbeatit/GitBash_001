@@ -43,38 +43,35 @@ https://ithelp.ithome.com.tw/articles/10133221
 
 
 
-=====以下方法
-001.設定ssh則可連線直接上傳到github
-GitBash本機端檔案上傳失敗,
-用GitHub Desktop的sync比較快!!!!!!
-*只有先Github網站上先建立才能成功
 =========
-
+以下方法
+一.GitBash_001.本機建立端檔案直接上傳github失敗
+(大多是先Github網站上先建立專案,再下載才能連線更新)
+二.設定ssh連線失敗
+(還是要打帳號密碼)
+******************************************************
+有空在研究了，用GitHub Desktop本機建立
+再直接上傳github能成功,sync也比較快!!!!!
+*********************************************************
+=========
 ------
 ssh-keygen -t rsa -C "your_email@example.com"
-
 ------
 在c:\users\your_name\.ssh裡面找到public和private key
-
 ------
 到 Github 網站加入你的 SSH key(public)
-
 ------
 ssh -T git@github.com
-
-------
+-----
 你會看到這個 warning，然後輸入“yes”
-
 ------
 git remote add origin git@github.com:yesbeatit/GitBash_001.git
-git remote add origin https://github.com/yesbeatit/GitBash_001.git
-
 git push -u origin master
+git push
 
- git push
 
 ===================
 本機端檔案上傳
-001.設定ssh則可連線直接上傳到github
-002.先在網站上建立檔案 選HTTPS,下載後連結
+001.設定ssh連線密碼，從本機建立GitBash直接上傳到github  (X)
+002.先在網站上建立檔案 選HTTPS,下載後連結 (O)
 
