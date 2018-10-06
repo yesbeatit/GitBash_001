@@ -1,0 +1,73 @@
+GitBash_001
+本機端初始化
+Windows的話使用Git Bash
+
+mkdir GitBash_001
+cd GitBash_001
+git init
+
+------
+git log  顯示fatal: your current branch 'master' does not have any commits yet表示無檔被記路錄
+
+-----看狀態
+git status 任何變化,紅色的是未輩追蹤要加入控管,綠色才OK
+
+------加入控管
+(1.若是加入所有檔案是git add .  2.一樣提交commit)
+(1.把index加入版本管理 ,   2.要提交commit)
+git add index.html
+git commit -m "add new index.html page"
+
+------查詢歷史紀錄
+git log 得到號碼,作者名字,email
+
+如果沒有得到就打
+git config --global user.email "__@gmail.com"
+git config --global user.name "name"
+好了看設定
+git config -l 
+在把提交commit打一次,要送出
+
+-----
+當我們又去改檔案時
+git status 會顯示紅色not staged,所以要(1.把index加入版本管理 ,2.要提交commit)
+git add index.html
+git commit -m "change word"
+
+-----
+以上本機版本管理
+參考連結* BASIC SNAPSHOTTING
+其它可參考
+https://ithelp.ithome.com.tw/articles/10133221
+
+
+=====以下方法GitBash失敗,用GitHub Desktop的sync比較快!!!!!!=========
+------
+ssh-keygen -t rsa -C "your_email@example.com"
+
+------
+在c:\users\your_name\.ssh裡面找到public和private key
+
+------
+到 Github 網站加入你的 SSH key(public)
+
+------
+ssh -T git@github.com
+
+------
+你會看到這個 warning，然後輸入“yes”
+
+------
+git remote add origin git@github.com:yesbeatit/GitBash_001.git
+git remote add origin https://github.com/yesbeatit/GitBash_001.git
+
+git push -u origin master
+
+
+ git push
+
+===================
+本機端檔案上傳
+001.設定ssh則可連線直接上傳到github
+002.先在網站上建立檔案 選HTTPS,下載後連結
+
